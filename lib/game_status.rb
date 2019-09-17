@@ -20,5 +20,7 @@ def won?(board)
 end
 
 def full?(board)
-  if won?(board)
+  board.detect do |index|
+    !position_taken?(board, index)
+  end
 end
